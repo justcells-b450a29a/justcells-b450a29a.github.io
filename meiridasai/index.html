@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛主题大赛吃瓜fun聚集地-吃瓜大赛_热门主题赛_吃瓜聚集地推荐</title>
+  <meta name="description" content="每日大赛主题大赛吃瓜fun聚集地，汇集每日主题大赛、吃瓜热门话题与fun聚集地最新动态。提供大赛分类、深度解析与用户评论，适合吃瓜爱好者追踪赛事和趣味话题。">
+  <meta name="keywords" content="主题大赛,吃瓜热门,fun聚集地,每日大赛,大赛话题">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f97316'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif'%3E🍉%3C/text%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    /* ---------- 全局重置与变量 ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-body: #fef9f6;
+      --bg-card: #ffffff;
+      --bg-side: #fffaf7;
+      --bg-accent-soft: #fff1e8;
+      --text-primary: #1e1b1a;
+      --text-secondary: #4a3f3a;
+      --text-muted: #7a6b63;
+      --accent: #f97316;
+      --accent-hover: #ea580c;
+      --accent-light: #fed7aa;
+      --border: #f0e4dc;
+      --border-strong: #e8d6cc;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 6px 18px rgba(249, 115, 22, 0.08);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --font-sans: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+      --header-height: 64px;
+      --announce-height: 38px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-body);
+      font-family: var(--font-sans);
+      color: var(--text-primary);
+      line-height: 1.6;
+      padding-top: var(--sticky-offset);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    /* 吸顶偏移锚点 */
+    [id] {
+      scroll-margin-top: var(--sticky-offset);
+    }
+
+    /* ---------- 公告条 + 页头（吸顶） ---------- */
+    .announce-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--announce-height);
+      background: linear-gradient(90deg, #f97316, #fb923c);
+      color: #fff;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .announce-bar span {
+      display: inline-block;
+      max-width: 1200px;
+      margin: 0 auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .site-header {
+      position: fixed;
+      top: var(--announce-height);
+      left: 0;
+      right: 0;
+      z-index: 999;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 0.875rem;
+      overflow-x: auto;
+      flex: 1;
+      justify-content: flex-end;
+      scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav a {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus-visible {
+      background: var(--bg-accent-soft);
+      color: var(--accent-hover);
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero-section {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--bg-accent-soft);
+      color: var(--accent-hover);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      width: fit-content;
+      border: 1px solid var(--accent-light);
+    }
+
+    .hero-section h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.4rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25);
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--border-strong);
+      color: var(--text-secondary);
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent-hover);
+    }
+
+    .hero-visual {
+      position: relative;
+      height: 220px;
+      background: linear-gradient(135deg, #fff7ed, #ffedd5);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    /* ---------- 主容器三栏 ---------- */
+    .page-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr) 250px;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    /* ---------- 左栏 ---------- */
+    .left-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .channel-nav {
+      background: var(--bg-side);
+      border-radius: var(--radius-md);
+      padding: 1rem 0.75rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .channel-nav h2 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      padding-left: 0.4rem;
+      font-weight: 700;
+    }
+
+    .channel-nav ul li {
+      margin-bottom: 0.15rem;
+    }
+
+    .channel-nav ul li a {
+      display: block;
+      padding: 0.45rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .channel-nav ul li a:hover,
+    .channel-nav ul li a:focus-visible {
+      background: var(--bg-accent-soft);
+      color: var(--accent-hover);
+    }
+
+    .filter-tags {
+      background: var(--bg-side);
+      border-radius: var(--radius-md);
+      padding: 1rem 0.75rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-tags h3 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      padding-left: 0.4rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .filter-tags .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .filter-tags .tag-list span {
+      font-size: 0.75rem;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      cursor: default;
+    }
+
+    /* ---------- 中栏主内容 ---------- */
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      min-width: 0;
+    }
+
+    .content-section {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.4rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .intro-text p {
+      margin-bottom: 0.8rem;
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+    }
+
+    /* 热门卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .content-card {
+      background: var(--bg-body);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .content-card:hover {
+      border-color: var(--accent-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: var(--text-primary);
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+    }
+
+    .card-meta span {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-stats {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 0.2rem;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .compact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .compact-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .compact-item .item-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-width: 120px;
+      color: var(--text-primary);
+    }
+
+    .compact-item .item-summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      flex: 1;
+    }
+
+    /* 分类入口网格 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+    }
+
+    .category-item {
+      background: var(--bg-accent-soft);
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 0.6rem;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+    }
+
+    .category-item:hover {
+      background: #ffe4d6;
+      border-color: var(--accent-light);
+      color: var(--accent-hover);
+    }
+
+    /* 深度解析正文 */
+    .deep-dive h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 1.2rem 0 0.6rem;
+      color: var(--text-primary);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      margin-bottom: 0.8rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .deep-dive ul {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+      list-style: disc;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .deep-dive ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .faq-list details {
+      background: var(--bg-body);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.9rem;
+    }
+
+    .faq-list summary {
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text-primary);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: '＋';
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-weight: 400;
+      transition: transform 0.2s;
+    }
+
+    .faq-list details[open] summary::after {
+      content: '－';
+    }
+
+    .faq-list details p {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      border-top: 1px solid var(--border);
+      padding-top: 0.5rem;
+    }
+
+    /* 评论 */
+    .review-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+
+    .review-item {
+      background: var(--bg-body);
+      border-radius: var(--radius-sm);
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+    }
+
+    .review-item .reviewer {
+      font-weight: 700;
+      color: var(--accent-hover);
+      font-size: 0.78rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .review-item .review-text {
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 资讯列表 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .news-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .news-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    .news-meta {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .news-summary {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* 相关推荐标签 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .rec-tags a {
+      font-size: 0.8rem;
+      background: var(--bg-body);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .rec-tags a:hover {
+      background: var(--bg-accent-soft);
+      border-color: var(--accent-light);
+      color: var(--accent-hover);
+    }
+
+    /* 时间线 */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--accent-light);
+    }
+
+    .timeline-item {
+      padding-left: 1rem;
+      position: relative;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.35rem;
+      top: 0.4rem;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-item strong {
+      color: var(--text-primary);
+    }
+
+    /* ---------- 右栏 ---------- */
+    .right-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sidebar-card {
+      background: var(--bg-side);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.03em;
+    }
+
+    .toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .toc-list a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      padding: 0.25rem 0.4rem;
+      border-radius: 6px;
+      display: block;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .toc-list a:hover {
+      background: var(--bg-accent-soft);
+      color: var(--accent-hover);
+    }
+
+    .hot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .hot-list a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.15s;
+    }
+
+    .hot-list a:last-child {
+      border-bottom: none;
+    }
+
+    .hot-list a:hover {
+      color: var(--accent-hover);
+    }
+
+    .hot-list a span {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .extra-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .extra-list a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      padding: 0.25rem 0;
+      transition: color 0.15s;
+    }
+
+    .extra-list a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ---------- 页尾 ---------- */
+    .site-footer {
+      background: #1e1b1a;
+      color: #b8a9a0;
+      padding: 2.5rem 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .footer-brand .brand-logo {
+      width: 32px;
+      height: 32px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+    }
+
+    .footer-brand .brand-text {
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .footer-desc {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      max-width: 420px;
+      color: #b8a9a0;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      font-size: 0.8rem;
+    }
+
+    .footer-links a {
+      color: #b8a9a0;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3a3330;
+      padding-top: 1rem;
+      font-size: 0.7rem;
+      color: #8a7b73;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .page-container {
+        grid-template-columns: 1fr;
+      }
+
+      .left-sidebar,
+      .right-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .left-sidebar .channel-nav,
+      .left-sidebar .filter-tags,
+      .right-sidebar .sidebar-card {
+        height: 100%;
+      }
+
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .hero-visual {
+        height: 180px;
+        order: -1;
+      }
+
+      .right-sidebar {
+        order: 2;
+      }
+
+      .left-sidebar {
+        order: 0;
+      }
+
+      .main-content {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-container {
+        padding: 1rem 0.8rem 2rem;
+      }
+
+      .left-sidebar,
+      .right-sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .brand-text {
+        font-size: 0.9rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .review-list {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .compact-item {
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+
+      .compact-item .item-title {
+        min-width: unset;
+      }
+
+      .hero-section h1 {
+        font-size: 1.6rem;
+      }
+
+      .announce-bar span {
+        font-size: 0.75rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
+        max-height: 100%;
+        overflow: hidden;
+      }
+
+      .announce-bar {
+        height: auto;
+        min-height: var(--announce-height);
+        padding: 0.25rem 1rem;
+      }
+
+      :root {
+        --announce-height: 44px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-actions .btn-primary,
+      .hero-actions .btn-outline {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* 可见焦点 */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* 滚动条美化（可选） */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-body);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner" aria-label="站点公告">
+    <span>🍉 每日主题大赛新赛季开启 · 吃瓜fun聚集地限时话题征集中 · 参与即有机会获得专属徽章</span>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/#hero" class="brand" aria-label="返回首页">
+        <span class="brand-logo" aria-hidden="true">🍉</span>
+        <span class="brand-text">每日大赛主题大赛吃瓜fun聚集地</span>
+      </a>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#intro">聚集地介绍</a>
+        <a href="/#hot">热门主题赛</a>
+        <a href="/#updates">每日大赛动态</a>
+        <a href="/#categories">吃瓜分类</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#reviews">瓜友评论</a>
+        <a href="/#news">相关资讯</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <span class="hero-badge">🔥 今日热度 · 主题大赛进行中</span>
+      <h1 id="hero-heading">每日大赛主题大赛吃瓜fun聚集地</h1>
+      <p class="hero-desc">
+        追踪每日主题大赛最新赛况，汇集吃瓜热门话题与fun聚集地精选内容。从大赛分类、深度解析到用户评论，一站式满足你对吃瓜大赛和热门主题赛的好奇心。
+      </p>
+      <div class="hero-actions">
+        <a href="/#hot" class="btn-primary">进入热门主题赛</a>
+        <a href="/#deep-dive" class="btn-outline">查看深度解析</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="吃瓜主题大赛视觉图">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f97316" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#fb923c" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="220" rx="20" fill="url(#g1)"/>
+        <circle cx="200" cy="100" r="52" fill="#f97316" opacity="0.12"/>
+        <circle cx="200" cy="100" r="36" fill="#f97316" opacity="0.2"/>
+        <text x="200" y="118" font-family="'Segoe UI',sans-serif" font-size="48" text-anchor="middle" fill="#f97316" opacity="0.7">🍉</text>
+        <rect x="120" y="160" width="160" height="8" rx="4" fill="#f97316" opacity="0.2"/>
+        <rect x="150" y="176" width="100" height="6" rx="3" fill="#f97316" opacity="0.15"/>
+        <circle cx="90" cy="60" r="6" fill="#f97316" opacity="0.3"/>
+        <circle cx="320" cy="150" r="8" fill="#f97316" opacity="0.2"/>
+        <circle cx="300" cy="50" r="4" fill="#f97316" opacity="0.4"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 三栏主内容区 -->
+  <div class="page-container">
+
+    <!-- 左栏 -->
+    <aside class="left-sidebar" aria-label="频道导航与分类筛选">
+      <nav class="channel-nav" aria-labelledby="channel-heading">
+        <h2 id="channel-heading">主题频道</h2>
+        <ul>
+          <li><a href="/#intro">聚集地介绍</a></li>
+          <li><a href="/#hot">热门主题赛</a></li>
+          <li><a href="/#updates">每日大赛动态</a></li>
+          <li><a href="/#categories">吃瓜分类</a></li>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#reviews">瓜友评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#recommend">相关推荐</a></li>
+          <li><a href="/#timeline">大赛时间线</a></li>
+        </ul>
+      </nav>
+      <div class="filter-tags">
+        <h3>热门标签</h3>
+        <div class="tag-list">
+          <span>主题大赛</span>
+          <span>吃瓜热门</span>
+          <span>fun聚集地</span>
+          <span>每日赛况</span>
+          <span>话题征集</span>
+          <span>瓜友讨论</span>
+          <span>大赛分类</span>
+          <span>深度解析</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="main-content" id="main-content">
+
+      <!-- 板块1：内容简介 / 平台介绍 -->
+      <section id="intro" class="content-section intro-text" aria-labelledby="intro-title">
+        <h2 id="intro-title" class="section-title">聚集地介绍</h2>
+        <p>
+          <strong>每日大赛主题大赛吃瓜fun聚集地</strong>是一个围绕主题大赛、吃瓜热门话题与fun聚集地内容展开的信息型页面。这里汇集每日大赛的最新赛况、吃瓜热门主题赛的推荐、深度解析以及瓜友评论，帮助吃瓜爱好者快速了解当下值得关注的主题大赛和趣味话题。
+        </p>
+        <p>
+          无论你是想找“每日大赛今日主题”这类具体赛程，还是想浏览“吃瓜热门话题排行”，或者想了解“主题大赛和吃瓜聚集地哪个更有趣”，都可以在页面中找到对应的内容入口。我们按照吃瓜大赛、主题赛、fun聚集地等方向整理了分类导航，并提供了深度解析与常见问答，方便你从不同角度获取信息。
+        </p>
+        <p>
+          页面内容覆盖吃瓜大赛分类、每日大赛动态、热门主题赛推荐、瓜友讨论精选以及相关资讯。通过标签和分类筛选，你可以快速定位到感兴趣的主题大赛类型，也可以沿着相关推荐继续扩展阅读。所有内容均以主题领域信息为主体，围绕吃瓜大赛和fun聚集地的实际话题展开。
+        </p>
+      </section>
+
+      <!-- 板块2：热门内容推荐 -->
+      <section id="hot" class="content-section" aria-labelledby="hot-title">
+        <h2 id="hot-title" class="section-title">热门主题赛推荐</h2>
+        <div class="card-grid">
+          <div class="content-card">
+            <div class="card-title">“反转剧情”主题大赛吃瓜精选</div>
+            <div class="card-meta"><span>吃瓜热门</span><span>反转</span><span>剧情向</span></div>
+            <p class="card-desc">盘点每日大赛中剧情反转最出人意料的主题作品，瓜友讨论热度持续走高。</p>
+            <div class="card-stats">🔥 热度 9.8 · 更新 2小时前</div>
+          </div>
+          <div class="content-card">
+            <div class="card-title">人气选手翻车现场吃瓜合辑</div>
+            <div class="card-meta"><span>每日大赛</span><span>翻车</span><span>合辑</span></div>
+            <p class="card-desc">主题大赛中那些意外翻车瞬间，fun聚集地瓜友整理的高能片段与讨论。</p>
+            <div class="card-stats">🔥 热度 9.5 · 评分 4.9</div>
+          </div>
+          <div class="content-card">
+            <div class="card-title">“脑洞大开”创意主题赛作品</div>
+            <div class="card-meta"><span>创意主题</span><span>脑洞</span><span>作品集</span></div>
+            <p class="card-desc">每日主题大赛中创意脑洞最强的参赛作品，适合寻找灵感时浏览。</p>
+            <div class="card-stats">🔥 热度 9.2 · 更新 5小时前</div>
+          </div>
+          <div class="content-card">
+            <div class="card-title">吃瓜聚集地周榜：本周十大话题</div>
+            <div class="card-meta"><span>fun聚集地</span><span>周榜</span><span>话题榜</span></div>
+            <p class="card-desc">汇总本周fun聚集地讨论度最高的十个吃瓜话题，涵盖主题大赛台前幕后。</p>
+            <div class="card-stats">🔥 热度 9.0 · 评分 4.7</div>
+          </div>
+          <div class="content-card">
+            <div class="card-title">主题大赛评委争议事件梳理</div>
+            <div class="card-meta"><span>大赛话题</span><span>评委</span><span>争议</span></div>
+            <p class="card-desc">针对近期主题大赛评委打分引发的讨论，整理多方观点与时间线。</p>
+            <div class="card-stats">🔥 热度 8.8 · 更新 1天前</div>
+          </div>
+          <div class="content-card">
+            <div class="card-title">“冷门宝藏”主题赛遗珠推荐</div>
+            <div class="card-meta"><span>遗珠推荐</span><span>冷门</span><span>宝藏</span></div>
+            <p class="card-desc">那些热度不高但质量过硬的每日大赛主题赛作品，吃瓜同时也不错过好内容。</p>
+            <div class="card-stats">🔥 热度 8.5 · 评分 4.8</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新 / 热门动态 -->
+      <section id="updates" class="content-section" aria-labelledby="updates-title">
+        <h2 id="updates-title" class="section-title">每日大赛动态</h2>
+        <div class="compact-list">
+          <div class="compact-item">
+            <span class="item-title">主题大赛第12期赛题公布</span>
+            <span class="item-summary">本期主题为“城市边缘”，鼓励参赛者从生活观察中寻找切入点。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">吃瓜热门话题“评委偏爱”引热议</span>
+            <span class="item-summary">多位瓜友在fun聚集地发帖讨论评委打分倾向，相关话题阅读量持续上升。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">人气选手“小橘”宣布退赛</span>
+            <span class="item-summary">每日大赛热门选手小橘因个人原因退赛，瓜友纷纷表示遗憾并送上祝福。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">主题大赛优秀作品线下展启动</span>
+            <span class="item-summary">本期精选作品将在城市艺术空间展出，吃瓜同时也能线下打卡。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">fun聚集地新增“话题追踪”功能</span>
+            <span class="item-summary">瓜友可以收藏感兴趣的主题大赛话题，方便持续跟进后续讨论与赛况。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">“反转剧情”主题赛投票通道开启</span>
+            <span class="item-summary">每日大赛官方开启大众投票，瓜友可为自己喜欢的作品助力。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">吃瓜聚集地本周新增讨论帖破千</span>
+            <span class="item-summary">fun聚集地吃瓜讨论氛围持续升温，主题大赛相关帖文占比最高。</span>
+          </div>
+          <div class="compact-item">
+            <span class="item-title">主题大赛历届冠军回访企划</span>
+            <span class="item-summary">将陆续回访往届冠军，分享参赛经验与吃瓜视角下的幕后故事。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section id="categories" class="content-section" aria-labelledby="categories-title">
+        <h2 id="categories-title" class="section-title">吃瓜分类入口</h2>
+        <div class="category-grid">
+          <a href="/#hot" class="category-item">主题大赛赛况</a>
+          <a href="/#hot" class="category-item">吃瓜热门话题</a>
+          <a href="/#updates" class="category-item">每日大赛动态</a>
+          <a href="/#deep-dive" class="category-item">深度解析</a>
+          <a href="/#reviews" class="category-item">瓜友评论精选</a>
+          <a href="/#news" class="category-item">相关资讯速递</a>
+          <a href="/#recommend" class="category-item">fun聚集地推荐</a>
+          <a href="/#timeline" class="category-item">大赛时间线</a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析正文 -->
+      <section id="deep-dive" class="content-section deep-dive" aria-labelledby="deep-dive-title">
+        <h2 id="deep-dive-title" class="section-title">深度解析：主题大赛的看点与吃瓜逻辑</h2>
+        <h3>主题大赛为什么容易产生吃瓜话题？</h3>
+        <p>
+          主题大赛通常围绕一个开放命题展开，参赛者来自不同背景，作品风格差异大，评委口味与大众喜好之间天然存在张力。这种张力正是吃瓜话题的土壤。每日大赛主题大赛吃瓜fun聚集地之所以受到关注，是因为它把赛事信息、选手动态和瓜友讨论放在了一起，让关注点从单一作品扩展到整个赛事生态。
+        </p>
+        <p>
+          在吃瓜大赛的语境下，观众不仅关心谁拿了高分，也关心赛题是否公平、评委是否专业、选手之间是否有故事。fun聚集地中的讨论往往围绕这些细节展开，形成一种边看比赛边聊天的氛围。
+        </p>
+        <h3>如何高效追踪每日主题大赛？</h3>
+        <p>
+          对于想持续跟进每日大赛的用户，建议先关注大赛动态栏目，了解赛题公布、投票开启和结果公示的关键节点。再结合深度解析和瓜友评论，理解争议点背后的逻辑。以下是一些实用的追踪方式：
+        </p>
+        <ul>
+          <li><strong>锁定大赛分类：</strong>按“赛况”“话题”“评论”分类浏览，避免信息混杂。</li>
+          <li><strong>利用标签筛选：</strong>通过“反转剧情”“脑洞大开”“评委争议”等标签快速定位感兴趣的内容。</li>
+          <li><strong>关注时间线：</strong>大赛时间线板块按日期梳理重要节点，适合回顾完整赛程。</li>
+        </ul>
+        <h3>吃瓜热门话题与fun聚集地的关系</h3>
+        <p>
+          fun聚集地本质上是瓜友交流的公共空间，主题大赛则是话题的引爆点。当大赛出现意外结果或争议判罚时，fun聚集地会迅速聚集讨论。反过来，聚集地中的热门讨论也会影响大赛的舆论走向。理解两者之间的互动，能让你在吃瓜时更有方向感。
+        </p>
+        <p>
+          主题大赛和日常吃瓜话题的区别在于，大赛有明确的赛程和规则，讨论更集中；而日常吃瓜话题更分散，适合碎片时间浏览。每日大赛主题大赛吃瓜fun聚集地将两者结合，既保留赛事的结构性，又保留吃瓜的轻松感。
+        </p>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section id="guide" class="content-section" aria-labelledby="guide-title">
+        <h2 id="guide-title" class="section-title">体验指南</h2>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.6rem;">
+          本页围绕吃瓜主题大赛信息进行组织，你可以通过以下方式快速使用：
+        </p>
+        <ul style="font-size:0.9rem; color:var(--text-secondary); padding-left:1.2rem; list-style:disc; display:flex; flex-direction:column; gap:0.4rem;">
+          <li>使用顶部导航或左侧频道列表跳转到具体板块，所有锚点均预留了吸顶偏移。</li>
+          <li>在首页首屏查看当前热门主题赛入口，直接进入热门推荐区域。</li>
+          <li>分类入口以网格形式呈现，点击即可定位到对应栏目，方便按需浏览。</li>
+          <li>FAQ采用折叠问答，点击问题即可展开答案，适合快速查找常见疑问。</li>
+          <li>移动端访问时，左右侧栏会合并到主内容下方，保证阅读顺序自然。</li>
+          <li>页面内所有内容均为主题相关示例数据，用于展示信息组织方式。</li>
+        </ul>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section id="faq" class="content-section" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="section-title">常见问答</h2>
+        <div class="faq-list">
+          <details>
+            <summary>每日大赛主题大赛一般多久更新一次赛题？</summary>
+            <p>根据常见赛制，主题大赛通常每周或每两周公布一个新赛题。具体更新频率以大赛官方通知为准，本页动态栏目会及时整理赛题公布时间。</p>
+          </details>
+          <details>
+            <summary>吃瓜热门话题里的内容适合什么人看？</summary>
+            <p>适合对主题大赛、选手动态和赛事讨论感兴趣的吃瓜爱好者。无论你是深度追踪还是碎片化浏览，都可以从热门话题中获取轻松的讨论素材。</p>
+          </details>
+          <details>
+            <summary>主题大赛和普通吃瓜聚集地有什么区别？</summary>
+            <p>主题大赛有明确的赛程、规则和评选机制，讨论更聚焦；普通吃瓜聚集地话题更宽泛。本页将两者结合，既提供大赛信息，也保留聚集地的轻松讨论氛围。</p>
+          </details>
+          <details>
+            <summary>在哪里可以看到每日大赛的完整时间线？</summary>
+            <p>页面中的“大赛时间线”板块按日期梳理了重要节点，包括赛题公布、投票开启和结果公示等。你可以通过左侧导航或页内目录快速跳转。</p>
+          </details>
+          <details>
+            <summary>fun聚集地的瓜友评论是真实的吗？</summary>
+            <p>本页评论为示例内容，用于展示评论区的组织方式，不代表真实用户身份或真实平台数据。实际产品中的评论会来自注册用户。</p>
+          </details>
+          <details>
+            <summary>如何筛选感兴趣的主题大赛类型？</summary>
+            <p>可以通过左侧热门标签或分类入口进行浏览。分类入口覆盖赛况、动态、深度解析、评论等方向，点击即可定位到对应内容区域。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section id="reviews" class="content-section" aria-labelledby="reviews-title">
+        <h2 id="reviews-title" class="section-title">瓜友评论</h2>
+        <div class="review-list">
+          <div class="review-item"><div class="reviewer">橘子汽水</div><div class="review-text">“反转剧情那场太精彩了，瓜根本停不下来。”</div></div>
+          <div class="review-item"><div class="reviewer">熬夜吃瓜</div><div class="review-text">“每天都会来刷一遍动态，生怕错过什么新瓜。”</div></div>
+          <div class="review-item"><div class="reviewer">小透明</div><div class="review-text">“深度解析写得挺清楚，看完对赛制更明白了。”</div></div>
+          <div class="review-item"><div class="reviewer">瓜田里的猹</div><div class="review-text">“有些评论有点主观，不过整体氛围还不错。”</div></div>
+          <div class="review-item"><div class="reviewer">不吃香菜</div><div class="review-text">“分类入口挺方便的，找话题很快。”</div></div>
+          <div class="review-item"><div class="reviewer">快乐星球</div><div class="review-text">“fun聚集地这个名字起得好，确实很欢乐。”</div></div>
+          <div class="review-item"><div class="reviewer">追赛人</div><div class="review-text">“希望多更新一些冷门宝藏作品，大众款看腻了。”</div></div>
+          <div class="review-item"><div class="reviewer">深夜刷帖</div><div class="review-text">“页面排版挺舒服的，手机上看也不累。”</div></div>
+          <div class="review-item"><div class="reviewer">吃瓜不吐皮</div><div class="review-text">“评委争议那篇梳理得可以，时间线很清楚。”</div></div>
+          <div class="review-item"><div class="reviewer">路过看看</div><div class="review-text">“中规中矩的资讯页，内容更新还算及时。”</div></div>
+          <div class="review-item"><div class="reviewer">瓜友小张</div><div class="review-text">“希望增加更多大赛类型，现在有点单一。”</div></div>
+          <div class="review-item"><div class="reviewer">热爱吃瓜</div><div class="review-text">“每天大赛的讨论氛围很好，大家都挺友善的。”</div></div>
+          <div class="review-item"><div class="reviewer">小豆子</div><div class="review-text">“看热门卡片就被安利了好几个作品。”</div></div>
+          <div class="review-item"><div class="reviewer">风一样</div><div class="review-text">“相关推荐标签挺精准的，找到了感兴趣的方向。”</div></div>
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section id="news" class="content-section" aria-labelledby="news-title">
+        <h2 id="news-title" class="section-title">相关资讯</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-title">主题大赛新赛季赛制调整，增加大众评审权重</span>
+            <span class="news-meta">2025-03-18</span>
+            <span class="news-summary">新赛季将提高大众评审票数占比，吃瓜群众的投票将更直接影响比赛结果。</span>
+          </div>
+          <div class="news-item">
+            <span class="news-title">fun聚集地发起“最难忘大赛瞬间”征集</span>
+            <span class="news-meta">2025-03-15</span>
+            <span class="news-summary">瓜友可分享往届主题大赛中印象最深的片段，优秀分享将获得专属标识。</span>
+          </div>
+          <div class="news-item">
+            <span class="news-title">每日大赛人气选手榜单更新，前三名竞争激烈</span>
+            <span class="news-meta">2025-03-12</span>
+            <span class="news-summary">本期人气选手票数接近，榜单前列竞争进入白热化阶段。</span>
+          </div>
+          <div class="news-item">
+            <span class="news-title">“脑洞大开”主题赛作品数量创新高</span>
+            <span class="news-meta">2025-03-10</span>
+            <span class="news-summary">本期创意主题赛投稿量突破历史纪录，瓜友讨论热度同步上升。</span>
+          </div>
+          <div class="news-item">
+            <span class="news-title">吃瓜热门话题“反转剧情”阅读量破百万</span>
+            <span class="news-meta">2025-03-08</span>
+            <span class="news-summary">该话题在fun聚集地持续发酵，成为近期讨论度最高的主题大赛相关话题。</span>
+          </div>
+          <div class="news-item">
+            <span class="news-title">主题大赛线下展映活动将于下月举行</span>
+            <span class="news-meta">2025-03-05</span>
+            <span class="news-summary">精选作品将在城市艺术空间展出，现场设置瓜友交流区，可预约参观。</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section id="recommend" class="content-section" aria-labelledby="recommend-title">
+        <h2 id="recommend-title" class="section-title">相关推荐</h2>
+        <div class="rec-tags">
+          <a href="/#hot">反转剧情主题赛</a>
+          <a href="/#hot">评委争议话题</a>
+          <a href="/#updates">每日大赛动态追踪</a>
+          <a href="/#deep-dive">吃瓜大赛深度解析</a>
+          <a href="/#categories">创意主题分类</a>
+          <a href="/#news">主题大赛资讯</a>
+          <a href="/#timeline">大赛时间线回顾</a>
+          <a href="/#reviews">瓜友评论精选</a>
+        </div>
+      </section>
+
+      <!-- 板块11：大赛时间线 -->
+      <section id="timeline" class="content-section" aria-labelledby="timeline-title">
+        <h2 id="timeline-title" class="section-title">大赛时间线</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>3月18日</strong> — 新赛季赛题公布，主题为“城市边缘”</div>
+          <div class="timeline-item"><strong>3月20日</strong> — 大众投票通道开启，瓜友可参与助力</div>
+          <div class="timeline-item"><strong>3月25日</strong> — 投稿截止，进入评审阶段</div>
+          <div class="timeline-item"><strong>3月28日</strong> — 人气选手榜单中期更新</div>
+          <div class="timeline-item"><strong>4月2日</strong> — 最终结果公示，吃瓜讨论进入高潮</div>
+          <div class="timeline-item"><strong>4月5日</strong> — 优秀作品线下展映启动</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="right-sidebar" aria-label="辅助阅读">
+      <div class="sidebar-card">
+        <h3>页内目录</h3>
+        <nav class="toc-list" aria-label="页内目录">
+          <a href="/#intro">聚集地介绍</a>
+          <a href="/#hot">热门主题赛</a>
+          <a href="/#updates">每日大赛动态</a>
+          <a href="/#categories">吃瓜分类</a>
+          <a href="/#deep-dive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#reviews">瓜友评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#recommend">相关推荐</a>
+          <a href="/#timeline">大赛时间线</a>
+        </nav>
+      </div>
+      <div class="sidebar-card">
+        <h3>热门条目</h3>
+        <div class="hot-list">
+          <a href="/#hot">反转剧情主题赛 <span>9.8</span></a>
+          <a href="/#hot">人气选手翻车合辑 <span>9.5</span></a>
+          <a href="/#hot">脑洞大开创意赛 <span>9.2</span></a>
+          <a href="/#hot">吃瓜聚集地周榜 <span>9.0</span></a>
+          <a href="/#hot">评委争议事件梳理 <span>8.8</span></a>
+          <a href="/#hot">冷门宝藏遗珠推荐 <span>8.5</span></a>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h3>延伸阅读</h3>
+        <div class="extra-list">
+          <a href="/#deep-dive">主题大赛为什么容易产生吃瓜话题？</a>
+          <a href="/#deep-dive">如何高效追踪每日主题大赛？</a>
+          <a href="/#deep-dive">吃瓜热门话题与fun聚集地的关系</a>
+          <a href="/#faq">每日大赛主题赛题多久更新？</a>
+          <a href="/#news">新赛季赛制调整解读</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <span class="brand-logo" aria-hidden="true">🍉</span>
+            <span class="brand-text">每日大赛主题大赛吃瓜fun聚集地</span>
+          </div>
+          <p class="footer-desc">
+            一个围绕主题大赛、吃瓜热门话题与fun聚集地内容的信息参考页面，帮助吃瓜爱好者追踪每日大赛动态、浏览分类话题与深度解析。
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/#intro">聚集地介绍</a>
+          <a href="/#hot">热门主题赛</a>
+          <a href="/#updates">每日大赛动态</a>
+          <a href="/#categories">吃瓜分类</a>
+          <a href="/#deep-dive">深度解析</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#reviews">瓜友评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#recommend">相关推荐</a>
+          <a href="/#timeline">大赛时间线</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 每日大赛主题大赛吃瓜fun聚集地 · 内容仅供参考</span>
+        <span>部分内容为示例数据，仅用于展示页面结构</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 轻量交互：无需脚本也可阅读，仅添加平滑滚动兼容和细节 -->
+  <script>
+    (function() {
+      // 确保锚点滚动偏移在动态公告条高度变化时也能大致正确（可选增强）
+      function adjustStickyOffset() {
+        const announce = document.querySelector('.announce-bar');
+        if (!announce) return;
+        const h = announce.offsetHeight;
+        document.documentElement.style.setProperty('--announce-height', h + 'px');
+      }
+      window.addEventListener('resize', adjustStickyOffset);
+      window.addEventListener('load', adjustStickyOffset);
+      // 初始调用
+      adjustStickyOffset();
+    })();
+  </script>
+</body>
+        </html>
