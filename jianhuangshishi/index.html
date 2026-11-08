@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>鉴黄师是干什么的-审核岗位职责_内容风险场景_入行与选择对比</title>
+<meta name="description" content="鉴黄师是干什么的？本文讲清内容审核岗位的职责边界、图片视频识别流程、心理与合规风险、入行门槛与远程坐班差异，适合想了解审核工作的人阅读。">
+<meta name="keywords" content="内容审核员,图片审核流程,视频审核标准,网络内容风控,审核岗位入行">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a2a4a'/%3E%3Ccircle cx='27' cy='28' r='11' fill='none' stroke='%23f2b705' stroke-width='5'/%3E%3Cline x1='35' y1='36' x2='48' y2='49' stroke='%23f2b705' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#16202f; --ink-2:#3d4a5e; --ink-3:#6b7788;
+  --bg:#f4f6f9; --panel:#ffffff; --line:#dfe4ec;
+  --brand:#1a2a4a; --brand-2:#2c4373; --accent:#c8892a; --accent-soft:#fdf3df;
+  --danger:#a63d3d; --ok:#2f6d54;
+  --r-s:6px; --r-m:10px; --r-l:16px;
+  --sh:0 1px 2px rgba(22,32,47,.06),0 6px 18px rgba(22,32,47,.05);
+  --maxw:1360px;
+  --stick:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  font-size:15.5px; line-height:1.75;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin-bottom:.35em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 18px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- 吸顶公告条 + 页头 ---------- */
+.stick-top{position:sticky;top:0;z-index:60}
+.notice{
+  background:linear-gradient(90deg,#1a2a4a,#2c4373 60%,#3a5688);
+  color:#f4f6f9;font-size:13px;letter-spacing:.2px;
+}
+.notice .wrap{display:flex;gap:12px;align-items:center;min-height:36px;flex-wrap:wrap}
+.notice b{color:#f2c14e;font-weight:700}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:#f2c14e;flex:none}
+.notice a{color:#ffdf9e}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(22,32,47,.05)}
+.head-in{display:flex;align-items:center;gap:20px;min-height:68px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{display:block;flex:none}
+.brand-name{font-size:20px;font-weight:800;color:var(--brand);letter-spacing:.5px}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+.head-nav a{
+  font-size:13.5px;color:var(--ink-2);padding:6px 10px;border-radius:99px;border:1px solid transparent;
+}
+.head-nav a:hover{background:#eef2f8;border-color:var(--line);text-decoration:none;color:var(--brand)}
+.head-nav a.hot{color:var(--brand);background:var(--accent-soft);border-color:#f0dcb4}
+
+/* ---------- 首屏 ---------- */
+.hero{background:linear-gradient(160deg,#16202f 0%,#1a2a4a 45%,#24395f 100%);color:#eef2f8;padding:34px 0 30px;overflow:hidden}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.6px;color:#f2c14e;border:1px solid rgba(242,193,78,.45);padding:4px 12px;border-radius:99px;margin-bottom:14px}
+.hero h1{font-size:clamp(26px,3.4vw,40px);letter-spacing:1px;color:#fff}
+.hero .lead{margin-top:14px;font-size:15.5px;color:#c6d2e4;max-width:34em}
+.hero .lead strong{color:#ffdf9e;font-weight:600}
+.hero-facts{display:flex;gap:26px;margin:20px 0 22px;flex-wrap:wrap}
+.hero-facts div{font-size:13px;color:#9fb0cb}
+.hero-facts b{display:block;font-size:22px;color:#fff;font-weight:800;line-height:1.2}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:9px 18px;border-radius:99px;font-size:14px;font-weight:600;border:1px solid transparent;cursor:pointer;font-family:inherit}
+.btn-main{background:#f2c14e;color:#1a2a4a}
+.btn-main:hover{background:#ffd475;text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#e8eef8}
+.btn-ghost:hover{background:rgba(255,255,255,.1);text-decoration:none}
+.hero-art{position:relative;height:230px}
+.hero-art svg{width:100%;height:100%;display:block}
+
+/* ---------- 三栏 ---------- */
+.layout{display:grid;grid-template-columns:178px minmax(0,1fr) 244px;gap:24px;align-items:start;padding:26px 0 40px}
+.col-side{position:sticky;top:var(--stick);font-size:13.5px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-m);box-shadow:var(--sh);padding:14px 14px 12px;margin-bottom:16px}
+.panel h4{font-size:12.5px;letter-spacing:1.4px;color:var(--ink-3);font-weight:700;margin-bottom:10px;text-transform:uppercase}
+.side-nav{list-style:none;margin:0;padding:0}
+.side-nav li{margin:0}
+.side-nav a{display:block;padding:6px 8px;border-radius:var(--r-s);color:var(--ink-2);font-size:13.5px;border-left:2px solid transparent}
+.side-nav a:hover{background:#eef2f8;color:var(--brand);text-decoration:none;border-left-color:var(--accent)}
+.side-nav a.on{background:#eef2f8;color:var(--brand);font-weight:600;border-left-color:var(--accent)}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px}
+.tag-cloud a{font-size:12px;padding:3px 9px;border:1px solid var(--line);border-radius:99px;color:var(--ink-2);background:#fafbfd}
+.tag-cloud a:hover{border-color:var(--accent);color:var(--brand);text-decoration:none;background:var(--accent-soft)}
+.toc{list-style:none;margin:0;padding:0;font-size:13px}
+.toc li{margin-bottom:2px}
+.toc a{color:var(--ink-2);display:block;padding:4px 8px 4px 10px;border-left:2px solid var(--line);border-radius:0 var(--r-s) var(--r-s) 0}
+.toc a:hover{color:var(--brand);border-left-color:var(--accent);background:#f7f9fc;text-decoration:none}
+.mini-list{list-style:none;margin:0;padding:0;font-size:13px}
+.mini-list li{padding:7px 0;border-bottom:1px dashed var(--line)}
+.mini-list li:last-child{border-bottom:0}
+.mini-list b{display:block;color:var(--ink);font-weight:600;font-size:13.2px}
+.mini-list span{color:var(--ink-3);font-size:12px}
+
+/* 主栏板块 */
+.sec{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-l);box-shadow:var(--sh);padding:24px 26px;margin-bottom:22px;scroll-margin-top:var(--stick)}
+.sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:2px solid #eef1f6;padding-bottom:10px;margin-bottom:16px;flex-wrap:wrap}
+.sec-head h2{font-size:20px;color:var(--brand);letter-spacing:.4px}
+.sec-head .sub{font-size:12.5px;color:var(--ink-3)}
+.sec-head .bar{width:4px;height:18px;background:var(--accent);border-radius:2px;flex:none;align-self:center}
+.sec h3{font-size:16px;color:var(--brand-2);margin:20px 0 8px;padding-left:10px;border-left:3px solid #e6d2a8}
+.sec h3:first-of-type{margin-top:4px}
+.sec p{color:var(--ink-2)}
+.sec .note{font-size:12.5px;color:var(--ink-3)}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:var(--r-m);padding:13px 14px;background:#fcfdff;display:flex;flex-direction:column;gap:7px;transition:.15s}
+.card:hover{border-color:#c9d5e6;box-shadow:0 6px 16px rgba(26,42,74,.08);transform:translateY(-1px)}
+.card .type{font-size:11.5px;color:#8a5a12;background:var(--accent-soft);border:1px solid #f0dcb4;border-radius:99px;padding:1px 8px;align-self:flex-start}
+.card h3{font-size:14.6px;margin:0;padding:0;border:0;color:var(--ink);line-height:1.45}
+.card .desc{font-size:12.8px;color:var(--ink-3);line-height:1.6;flex:1}
+.card .meta{display:flex;gap:10px;font-size:11.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:7px;flex-wrap:wrap}
+.card .meta b{color:var(--danger);font-weight:600}
+.kw{font-size:11.5px;color:var(--brand-2);background:#eef2f8;border-radius:4px;padding:1px 6px}
+
+/* 动态列表 */
+.dyn{list-style:none;margin:0;padding:0;counter-reset:d}
+.dyn li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start}
+.dyn li:last-child{border-bottom:0}
+.dyn li::before{counter-increment:d;content:counter(d);font-size:12px;font-weight:700;color:#fff;background:var(--brand-2);width:22px;height:22px;border-radius:6px;display:grid;place-items:center;margin-top:2px}
+.dyn b{font-size:14px;color:var(--ink);font-weight:600}
+.dyn p{font-size:12.8px;color:var(--ink-3);margin:2px 0 0}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.cat{display:block;border:1px solid var(--line);border-radius:var(--r-m);padding:11px 12px;background:linear-gradient(180deg,#fff,#f7f9fc)}
+.cat:hover{border-color:var(--accent);text-decoration:none;background:var(--accent-soft)}
+.cat b{display:block;font-size:13.8px;color:var(--brand)}
+.cat span{font-size:12px;color:var(--ink-3);line-height:1.5;display:block;margin-top:2px}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.cbox{border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.cbox .hd{padding:8px 12px;font-size:13.5px;font-weight:700;background:#eef2f8;color:var(--brand)}
+.cbox.alt .hd{background:var(--accent-soft);color:#7a4e0c}
+.cbox ul{margin:0;padding:10px 12px 10px 28px;font-size:13px;color:var(--ink-2)}
+
+/* 步骤 */
+.steps{list-style:none;margin:10px 0;padding:0;counter-reset:s}
+.steps li{position:relative;padding:0 0 14px 38px;border-left:2px solid #e3e9f2;margin-left:12px}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:-13px;top:0;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.steps b{display:block;font-size:14px;color:var(--brand)}
+.steps p{font-size:13px;color:var(--ink-2);margin:2px 0 0}
+
+/* FAQ */
+details{border:1px solid var(--line);border-radius:var(--r-m);margin-bottom:8px;background:#fcfdff}
+details[open]{border-color:#c9d5e6;background:#fff}
+summary{cursor:pointer;padding:11px 14px;font-size:14px;font-weight:600;color:var(--brand);list-style:none;display:flex;gap:8px;align-items:flex-start}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"?";flex:none;width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;display:grid;place-items:center;margin-top:3px;font-weight:700}
+details[open] summary{border-bottom:1px dashed var(--line)}
+details .ans{padding:11px 14px 13px 40px;font-size:13.5px;color:var(--ink-2)}
+details .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.cmts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cmt{border:1px solid var(--line);border-radius:var(--r-m);padding:10px 12px;background:#fcfdff}
+.cmt .who{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--ink-3);margin-bottom:4px}
+.cmt .av{width:22px;height:22px;border-radius:50%;background:var(--brand-2);color:#fff;font-size:11px;display:grid;place-items:center;flex:none;font-weight:700}
+.cmt p{font-size:13px;color:var(--ink-2);margin:0}
+
+/* 资讯 */
+.news{list-style:none;margin:0;padding:0}
+.news li{padding:10px 0;border-bottom:1px dashed var(--line)}
+.news li:last-child{border-bottom:0}
+.news .t{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.news b{font-size:14.2px;color:var(--ink);font-weight:600}
+.news time{font-size:11.5px;color:var(--ink-3);background:#eef2f8;border-radius:4px;padding:1px 7px}
+.news p{font-size:12.8px;color:var(--ink-3);margin:3px 0 0}
+
+/* 推荐列表 */
+.recs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.recs a{display:block;border:1px solid var(--line);border-radius:var(--r-s);padding:8px 10px;font-size:13px;color:var(--ink-2);background:#fcfdff}
+.recs a:hover{border-color:var(--accent);color:var(--brand);background:var(--accent-soft);text-decoration:none}
+.recs a span{display:block;font-size:11.5px;color:var(--ink-3)}
+
+/* 时间线 */
+.tl{list-style:none;margin:10px 0 0;padding:0}
+.tl li{position:relative;padding:0 0 14px 22px;border-left:2px solid #e3e9f2;margin-left:6px}
+.tl li:last-child{border-left-color:transparent;padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 1px #e6d2a8}
+.tl b{font-size:13.5px;color:var(--brand)}
+.tl p{font-size:13px;color:var(--ink-2);margin:2px 0 0}
+
+/* 搜索筛选 */
+.finder{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.finder input[type=search]{flex:1;min-width:180px;padding:8px 12px;border:1px solid var(--line);border-radius:99px;font-size:13.5px;font-family:inherit;background:#fafbfd;color:var(--ink)}
+.finder input[type=search]:focus{outline:2px solid #b9cdf0;outline-offset:1px;border-color:#b9cdf0}
+.finder .chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font-size:13px;color:var(--ink-2);cursor:pointer;font-family:inherit}
+.finder .chip:hover{border-color:var(--accent);color:var(--brand)}
+.finder .chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.empty{display:none;font-size:13px;color:var(--danger);padding:8px 0}
+.empty.show{display:block}
+.hide{display:none !important}
+
+/* 页尾 */
+.site-foot{background:#16202f;color:#b7c3d6;padding:34px 0 22px;font-size:13.5px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.site-foot h4{color:#fff;font-size:13.5px;letter-spacing:1px;margin-bottom:10px}
+.site-foot a{color:#b7c3d6;display:block;padding:2px 0;font-size:13px}
+.site-foot a:hover{color:#ffdf9e}
+.foot-brand{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.foot-brand b{color:#fff;font-size:17px;letter-spacing:.5px}
+.foot-note{border-top:1px solid #2a3a52;margin-top:24px;padding-top:14px;font-size:12px;color:#7f8ea6;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:1080px){
+  .layout{grid-template-columns:minmax(0,1fr) 240px}
+  .col-left{grid-column:1/-1;position:static;display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  .hero-in{grid-template-columns:1fr}
+  .hero-art{height:170px;order:-1}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .col-right{position:static}
+  .col-left{grid-template-columns:1fr 1fr}
+  .cmts,.recs,.compare{grid-template-columns:1fr}
+  .sec{padding:18px 16px}
+}
+@media (max-width:520px){
+  body{font-size:15px}
+  :root{--stick:132px}
+  .head-in{gap:10px;padding:8px 0}
+  .head-nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;margin-left:0}
+  .head-nav a{flex:none;font-size:12.5px}
+  .col-left{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-facts{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="stick-top">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>审核岗观察</b> 本月更新：图片分级标准调整、夜班岗位心理支持方案、远程审核合规要点已补充</span>
+      <a href="#latest">查看更新条目 →</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-in">
+      <div class="brand">
+        <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1a2a4a"/>
+          <circle cx="27" cy="28" r="11" fill="none" stroke="#f2c14e" stroke-width="5"/>
+          <line x1="35" y1="36" x2="48" y2="49" stroke="#f2c14e" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">鉴黄师是干什么的</span>
+      </div>
+      <nav class="head-nav" aria-label="主题频道">
+        <a href="#intro">岗位定义</a>
+        <a href="#hot">职责场景</a>
+        <a href="#latest" class="hot">更新动态</a>
+        <a href="#cats">审核类型</a>
+        <a href="#deep">流程解析</a>
+        <a href="#guide">入行指南</a>
+        <a href="#faq">常见问答</a>
+        <a href="#news">行业资讯</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="kicker">内容安全 · 岗位认知</span>
+      <h1>鉴黄师是干什么的</h1>
+      <p class="lead">用一句话说清：这是网络平台里负责识别与拦截色情、低俗、违规图像视频的<strong>内容审核岗位</strong>。工作不是"看片"，而是按分级标准做判断、留证据、写结论，并把风险挡在用户看到之前。</p>
+      <div class="hero-facts">
+        <div><b>3 类</b>图片 / 视频 / 直播流</div>
+        <div><b>7×24</b>轮班值守常态</div>
+        <div><b>秒级</b>单条初判节奏</div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="#deep">看清审核流程</a>
+        <a class="btn btn-ghost" href="#guide">了解入行门槛</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 230" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2c4373"/><stop offset="1" stop-color="#16202f"/>
+          </linearGradient>
+        </defs>
+        <rect x="6" y="18" width="408" height="194" rx="16" fill="url(#g1)" stroke="#3a5688"/>
+        <rect x="26" y="40" width="120" height="86" rx="8" fill="#22355b" stroke="#3c5a8f"/>
+        <rect x="34" y="52" width="104" height="10" rx="4" fill="#4c6da5"/>
+        <rect x="34" y="70" width="72" height="8" rx="4" fill="#3c5a8f"/>
+        <rect x="34" y="86" width="88" height="8" rx="4" fill="#3c5a8f"/>
+        <rect x="26" y="136" width="120" height="56" rx="8" fill="#1d2f52" stroke="#3c5a8f"/>
+        <circle cx="86" cy="164" r="16" fill="none" stroke="#f2c14e" stroke-width="4"/>
+        <line x1="98" y1="176" x2="112" y2="190" stroke="#f2c14e" stroke-width="5" stroke-linecap="round"/>
+        <rect x="166" y="40" width="228" height="152" rx="10" fill="#1d2f52" stroke="#3c5a8f"/>
+        <rect x="182" y="56" width="196" height="12" rx="5" fill="#4c6da5"/>
+        <rect x="182" y="80" width="150" height="9" rx="4" fill="#3c5a8f"/>
+        <rect x="182" y="98" width="176" height="9" rx="4" fill="#3c5a8f"/>
+        <rect x="182" y="116" width="120" height="9" rx="4" fill="#3c5a8f"/>
+        <rect x="182" y="142" width="58" height="22" rx="11" fill="#f2c14e"/>
+        <rect x="250" y="142" width="58" height="22" rx="11" fill="none" stroke="#4c6da5"/>
+        <text x="196" y="158" font-size="11" fill="#1a2a4a" font-family="sans-serif" font-weight="700">通过</text>
+        <text x="266" y="158" font-size="11" fill="#9fb0cb" font-family="sans-serif">复核</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap layout">
+
+  <!-- 左栏 -->
+  <aside class="col-left" aria-label="频道与标签索引">
+    <div class="panel">
+      <h4>栏目导航</h4>
+      <ul class="side-nav">
+        <li><a href="#intro" class="on">岗位定义</a></li>
+        <li><a href="#hot">职责场景</a></li>
+        <li><a href="#latest">更新动态</a></li>
+        <li><a href="#cats">审核类型</a></li>
+        <li><a href="#deep">流程解析</a></li>
+        <li><a href="#guide">入行指南</a></li>
+        <li><a href="#faq">常见问答</a></li>
+        <li><a href="#cmt">从业者说</a></li>
+        <li><a href="#news">行业资讯</a></li>
+        <li><a href="#recs">延伸方向</a></li>
+        <li><a href="#timeline">标准演进</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>高频检索标签</h4>
+      <div class="tag-cloud">
+        <a href="#cats">图片分级</a>
+        <a href="#cats">视频审核标准</a>
+        <a href="#hot">直播巡查</a>
+        <a href="#guide">远程坐班</a>
+        <a href="#faq">夜班心理</a>
+        <a href="#deep">误判申诉</a>
+        <a href="#recs">内容风控</a>
+        <a href="#faq">入行门槛</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏 -->
+  <main class="col-main">
+
+    <!-- 1 简介 -->
+    <section class="sec" id="intro">
+      <div class="sec-head"><span class="bar"></span><h2>内容简介：这个岗位到底在做什么</h2><span class="sub">岗位定位 · 职责边界</span></div>
+      <p><strong>鉴黄师是干什么的</strong>，最直接的回答是：在互联网平台的内容安全体系里，专门负责识别色情、低俗、性暗示以及相关违规图像与视频的审核人员。他们不是执法者，也不是单纯"看一眼就下结论"的旁观者，而是把平台的内容分级规则翻译成一条条可执行判断的人。用户刷到一条干净的短视频、打开一个正常的直播间，背后往往就有这道环节在起作用。</p>
+      <p>从工作内容看，这个岗位大致覆盖三块：一是<strong>图片审核</strong>，包括头像、封面、帖子配图、商品详情图；二是<strong>视频与直播审核</strong>，需要对画面、动作、文字贴纸、语音做综合判断；三是<strong>衍生风险识别</strong>，比如软色情暗示、未成年人相关画面、引流到站外的违规内容。不同平台给的权限不同，有的只做初判打标，有的可以直接处置下架。</p>
+      <p>很多人以为这份工作只是"看"，其实判断之外还有大量文字工作：写处置理由、留存证据截图、标注命中规则、处理用户申诉复核。审核结论要能经得起复盘，所以记录规范往往比眼力更被看重。</p>
+      <p>它与"内容风控"这个大概念的关系是：内容风控包含策略、模型、人工审核多层，而人工审核是最后一道兜底。模型能拦掉大部分明显违规，剩下的边界样本、擦边内容、语境依赖强的画面，才交到人工手里。这也解释了为什么这个岗位对<strong>判断一致性</strong>的要求远高于对速度的追求。</p>
+    </section>
+
+    <!-- 2 热门推荐 -->
+    <section class="sec" id="hot">
+      <div class="sec-head"><span class="bar"></span><h2>职责场景：六类最常遇到的审核任务</h2><span class="sub">按内容形态拆分</span></div>
+      <div class="cards">
+        <article class="card">
+          <span class="type">图片审核</span>
+          <h3>社交头像与封面图分级判断</h3>
+          <p class="desc">面对大量用户上传的头像、封面，按暴露程度、姿势暗示、文字诱导三档判断，边界样本需要二次复核。</p>
+          <div class="meta"><span>命中率 <b>偏高</b></span><span class="kw">图片分级</span><span class="kw">边界样本</span></div>
+        </article>
+        <article class="card">
+          <span class="type">视频审核</span>
+          <h3>短视频逐段抽帧与动作识别</h3>
+          <p class="desc">长视频按关键帧抽取，重点看动作连续性、镜头切换、字幕贴纸，避免只看单帧造成误判。</p>
+          <div class="meta"><span>节奏 <b>紧凑</b></span><span class="kw">视频审核标准</span><span class="kw">抽帧</span></div>
+        </article>
+        <article class="card">
+          <span class="type">直播巡查</span>
+          <h3>直播间实时画面与语音联动判断</h3>
+          <p class="desc">直播不可回溯，需要在几秒内完成判断并决定是否中断，常与语音识别结果交叉验证。</p>
+          <div class="meta"><span>时效 <b>秒级</b></span><span class="kw">直播巡查</span><span class="kw">实时处置</span></div>
+        </article>
+        <article class="card">
+          <span class="type">文本辅助</span>
+          <h3>配文与标签的软色情识别</h3>
+          <p class="desc">图片本身合规但配文带引流暗示时，需要结合语境判断，这类样本最考验规则理解深度。</p>
+          <div class="meta"><span>难度 <b>较高</b></span><span class="kw">软色情</span><span class="kw">语境判断</span></div>
+        </article>
+        <article class="card">
+          <span class="type">申诉复核</span>
+          <h3>被误判内容的二次裁定</h3>
+          <p class="desc">用户对处置结果提出申诉，复核岗需重看原始素材与处置记录，给出维持或撤销的书面结论。</p>
+          <div class="meta"><span>责任 <b>较重</b></span><span class="kw">误判申诉</span><span class="kw">复核记录</span></div>
+        </article>
+        <article class="card">
+          <span class="type">专项治理</span>
+          <h3>未成年人相关画面的优先拦截</h3>
+          <p class="desc">涉及未成年人的任何性化呈现都属于最高优先级，通常要求立即上报而非自行处置。</p>
+          <div class="meta"><span>优先级 <b>最高</b></span><span class="kw">未成年人保护</span><span class="kw">立即上报</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="sec" id="latest">
+      <div class="sec-head"><span class="bar"></span><h2>更新动态：近期规则与岗位变化</h2><span class="sub">示例条目 · 按主题整理</span></div>
+      <ol class="dyn">
+        <li><div><b>图片分级标准新增"局部遮挡"判定细则</b><p>对使用贴纸、马赛克遮挡关键部位但整体仍具性暗示的画面，明确归入需处置档位。</p></div></li>
+        <li><div><b>直播巡查岗增设语音与画面交叉复核流程</b><p>单一维度命中不再直接中断，需双维度印证，降低误伤正常主播的概率。</p></div></li>
+        <li><div><b>夜班岗位心理支持方案更新</b><p>增加轮岗间隔与强制休息时段，长期接触违规素材的岗位被建议缩短单次连续工作时长。</p></div></li>
+        <li><div><b>远程审核合规要点补充</b><p>居家坐班需满足独立空间、屏幕防窥、操作留痕三项条件，敏感素材不得本地留存。</p></div></li>
+        <li><div><b>AI 预筛比例提升，人工聚焦边界样本</b><p>明显违规由模型先拦，人工审核更多集中在擦边、语境依赖、多义画面三类。</p></div></li>
+        <li><div><b>申诉复核时限压缩至 24 小时</b><p>复核岗需要更快给出书面结论，处置理由模板同步细化。</p></div></li>
+        <li><div><b>未成年人相关样本处置流程单列</b><p>从常规队列中剥离，走专线上报，不参与常规绩效统计。</p></div></li>
+        <li><div><b>审核员分级认证试点</b><p>按图片、视频、直播分方向考核，通过后承担更高权限的处置动作。</p></div></li>
+      </ol>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="sec" id="cats">
+      <div class="sec-head"><span class="bar"></span><h2>审核类型：按内容形态分的八个方向</h2><span class="sub">分类定位 · 可筛选</span></div>
+      <div class="cats" id="catList">
+        <a class="cat" href="#hot" data-cat="图片"><b>图片审核</b><span>头像、封面、帖子配图的分级判断</span></a>
+        <a class="cat" href="#hot" data-cat="视频"><b>视频审核</b><span>抽帧、动作连续性、字幕贴纸</span></a>
+        <a class="cat" href="#hot" data-cat="直播"><b>直播巡查</b><span>实时画面与语音联动处置</span></a>
+        <a class="cat" href="#hot" data-cat="文本"><b>文本辅助审核</b><span>配文、标签、引流的软色情识别</span></a>
+        <a class="cat" href="#hot" data-cat="申诉"><b>申诉复核</b><span>误判内容的二次裁定与记录</span></a>
+        <a class="cat" href="#hot" data-cat="专项"><b>专项治理</b><span>未成年人相关画面的优先拦截</span></a>
+        <a class="cat" href="#hot" data-cat="策略"><b>审核策略</b><span>规则落地、样本库维护、口径统一</span></a>
+        <a class="cat" href="#hot" data-cat="培训"><b>审核培训</b><span>新人带教、分级认证、案例复盘</span></a>
+      </div>
+      <p class="note">说明：分类入口同时作为栏目定位链接，点击跳转至对应职责说明；上方检索框可对卡片标题与看点做本地筛选。</p>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="sec" id="deep">
+      <div class="sec-head"><span class="bar"></span><h2>流程解析：一条违规素材如何被拦下</h2><span class="sub">深度正文</span></div>
+
+      <h3>先看规则，再看画面</h3>
+      <p>刚接触这个岗位的人容易犯一个错误：拿到图就开始凭直觉判断。成熟的审核员会先确认当前适用的是哪一版分级规则，因为同一张图在不同业务线、不同场景下结论可能不同。比如泳装照在电商服装类目属于正常商品图，在陌生人社交的头像位就可能触发处置。规则先行，是保证判断一致的前提。</p>
+      <p>规则通常写成三档：明确违规、边界待定、正常。明确违规直接处置，正常放行，真正消耗精力的是边界待定——这部分需要标注命中条目、写下判断理由，必要时提交复核。</p>
+
+      <h3>抽帧与连续性判断</h3>
+      <p>视频审核不是逐帧看完，而是按镜头变化抽帧，再结合动作连续性推断。单帧看起来正常的画面，连续播放时可能构成明显暗示；反过来，单帧容易误读的画面，放到上下文里可能是正常舞蹈动作。所以审核员会同时看关键帧序列和音频字幕，形成完整判断链。</p>
+      <ol>
+        <li>定位镜头切换点，抽取每段首尾帧。</li>
+        <li>标记疑似违规帧，回看前后三秒确认动作意图。</li>
+        <li>叠加字幕、贴纸、语音转写结果，判断是否存在引流或暗示。</li>
+        <li>给出档位结论，写明命中规则编号。</li>
+      </ol>
+
+      <h3>处置与留痕同样重要</h3>
+      <p>判断完成只是前半程。处置动作要写清下架、限流、警告还是仅打标，理由要能被不懂业务的复核人看懂。截图、时间戳、规则编号三样缺一不可。很多平台会把处置理由纳入质检抽查，理由写得含糊，即使结论正确也可能被判为不合格。</p>
+      <p>这也是为什么<strong>鉴黄师是干什么的</strong>这个问题，答案里必须包含"写结论"这一项。它本质上是把模糊的视觉信息转成可追溯的书面判断，而不是简单地做取舍。</p>
+
+      <h3>误判与申诉的闭环</h3>
+      <p>再熟练的审核员也会有误判。申诉复核环节的价值在于校正口径：如果某类样本反复被申诉成功，说明规则描述或培训案例需要更新。健康的内容安全团队会把申诉数据当作规则优化的输入，而不是单纯追究个人责任。</p>
+      <ul>
+        <li>申诉成立：撤销处置，恢复内容，记录规则歧义点。</li>
+        <li>申诉不成立：维持结论，向用户说明依据。</li>
+        <li>反复争议：提交策略岗，补充案例入库。</li>
+      </ul>
+
+      <h3>模型与人工的分工</h3>
+      <p>现在的审核流水线大多是人机协同。模型负责高召回，把可疑内容尽量捞出来；人工负责高准确，把捞出来的样本做精细判断。模型拦不住的擦边内容、语境依赖强的画面、新出现的规避手法，才是人工审核的主战场。理解这条分工，也就理解了这个岗位为什么强调规则理解和案例积累，而不是单纯的眼疾手快。</p>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="sec" id="guide">
+      <div class="sec-head"><span class="bar"></span><h2>入行指南：从了解到上手要过的几关</h2><span class="sub">操作步骤</span></div>
+      <ol class="steps">
+        <li><b>先确认自己能接受工作内容</b><p>长期接触违规素材会带来情绪消耗，入行前应了解轮岗机制、心理支持与休息安排，这是比薪资更该先问清的问题。</p></li>
+        <li><b>熟悉分级规则与术语</b><p>暴露程度、暗示强度、场景语境、未成年人相关条款，这些是判断的基础词汇，规则文档通常需要反复对照案例才能吃透。</p></li>
+        <li><b>练习一致性判断</b><p>同一批样本隔天再看一遍，看结论是否稳定。团队质检看的不是你判得多快，而是你和团队口径是否一致。</p></li>
+        <li><b>掌握留痕与工具操作</b><p>截图、标注、规则编号填写、申诉流转，这些操作要形成肌肉记忆，减少因记录不全导致的返工。</p></li>
+        <li><b>选择坐班或远程模式</b><p>远程岗位对空间隔离、屏幕防窥、网络稳定性有硬性要求，敏感素材不得本地留存，需提前确认设备条件。</p></li>
+        <li><b>规划方向</b><p>从初判到复核、从审核到策略或培训，是这个岗位常见的成长路径，提前了解分级认证要求有助于少走弯路。</p></li>
+      </ol>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="sec" id="faq">
+      <div class="sec-head"><span class="bar"></span><h2>常见问答：入行前最想弄清的六个问题</h2><span class="sub">折叠阅读</span></div>
+
+      <details>
+        <summary>鉴黄师是干什么的，和普通内容审核员有什么区别？</summary>
+        <div class="ans"><p>两者是包含关系。内容审核员范围更广，涉政、涉暴、涉诈、侵权都在内；这个岗位专指其中负责色情与低俗内容识别的那一部分。实际工作中很多团队并不单设此岗，而是由内容审核员轮岗承担。</p></div>
+      </details>
+      <details>
+        <summary>做图片审核需要什么学历和专业背景？</summary>
+        <div class="ans"><p>多数岗位对学历要求不算高，更看重规则理解力、判断稳定性和抗压能力。法律、新闻、心理学背景在理解语境和沟通申诉时略有优势，但不是硬门槛。真正拉开差距的是案例积累速度。</p></div>
+      </details>
+      <details>
+        <summary>视频审核标准和图片审核差别大吗？</summary>
+        <div class="ans"><p>差别不小。图片是静态单帧判断，视频要处理动作连续性和上下文，同一帧在不同序列里结论可能相反。视频还涉及音频、字幕、贴纸等多模态信息，判断链条更长，误判成本也更高。</p></div>
+      </details>
+      <details>
+        <summary>长期看违规素材会不会有心理影响？</summary>
+        <div class="ans"><p>会有。行业里比较成熟的做法包括控制单次连续时长、定期轮岗、设置强制休息、提供心理支持渠道。个人层面可以建立下班后的"切换仪式"，比如运动、社交，帮助情绪从工作内容中抽离。</p></div>
+      </details>
+      <details>
+        <summary>远程坐班和公司坐班哪个更适合新人？</summary>
+        <div class="ans"><p>新人更适合有带教的坐班环境，遇到边界样本可以当场请教，口径统一更快。远程岗位对自律、设备隔离和沟通效率要求更高，通常更适合已有一定审核经验的人。</p></div>
+      </details>
+      <details>
+        <summary>这个岗位未来会被 AI 完全替代吗？</summary>
+        <div class="ans"><p>高召回的部分已经大量交给模型，但边界判断、语境理解、申诉裁定仍需要人。更可能的走向是人工审核规模收缩、单岗要求提高，从"看得多"转向"判得准、写得清、能优化规则"。</p></div>
+      </details>
+    </section>
+
+    <!-- 8 评论 -->
+    <section class="sec" id="cmt">
+      <div class="sec-head"><span class="bar"></span><h2>从业者说：来自不同岗位的真实感受</h2><span class="sub">示例评论 · 语气多样</span></div>
+      <div class="cmts">
+        <div class="cmt"><div class="who"><span class="av">林</span>林间有风</div><p>做图片初判两年，最大的体会是规则比眼力重要。同一张图不同业务线结论不同，先看规则再动眼。</p></div>
+        <div class="cmt"><div class="who"><span class="av">陈</span>陈默</div><p>直播巡查压力确实大，几秒钟要决定断不断，断了怕误伤，不断怕出事。后来有了双维度印证才轻松点。</p></div>
+        <div class="cmt"><div class="who"><span class="av">周</span>周末不加班</div><p>夜班真的熬人，不是体力问题，是内容带来的情绪消耗。轮岗制度落实到位的话会好很多。</p></div>
+        <div class="cmt"><div class="who"><span class="av">吴</span>吴小满</div><p>申诉复核岗，天天看别人判错。说实话这活儿挺锻炼规则理解，但也很容易得罪一线同事。</p></div>
+        <div class="cmt"><div class="who"><span class="av">赵</span>赵一川</div><p>刚入行以为就是看图，结果一半时间在写处置理由。写不清楚质检就不过，返工比判断还累。</p></div>
+        <div class="cmt"><div class="who"><span class="av">何</span>何须问</div><p>远程坐班一年，独立空间和防窥膜是硬要求，敏感素材不能落本地，这点千万别抱侥幸。</p></div>
+        <div class="cmt"><div class="who"><span class="av">孙</span>孙不语</div><p>不太喜欢"鉴黄师"这个叫法，容易让人误解。我们做的是内容安全，色情只是其中一块。</p></div>
+        <div class="cmt"><div class="who"><span class="av">郑</span>郑三岁</div><p>模型预筛之后轻松了不少，明显违规基本不用人看了，剩下的都是烧脑的边界样本。</p></div>
+        <div class="cmt"><div class="who"><span class="av">冯</span>冯小刀</div><p>做了三年转策略岗，回头看一线经历挺值钱，知道规则哪里写得不落地。</p></div>
+        <div class="cmt"><div class="who"><span class="av">许</span>许青禾</div><p>团队质检看一致性不看速度，这点新人要早点明白，别为了赶量乱判。</p></div>
+        <div class="cmt"><div class="who"><span class="av">邓</span>邓不利多</div><p>心理支持方案有用但不够，关键还是自己要有下班后的出口，不然容易把情绪带回家。</p></div>
+        <div class="cmt"><div class="who"><span class="av">曹</span>曹半仙</div><p>未成年人相关样本走专线，这个设计很对，不该混在常规绩效里比速度。</p></div>
+        <div class="cmt"><div class="who"><span class="av">袁</span>袁小楼</div><p>中性说一句，这岗位薪资不算高，胜在门槛相对低、需求稳定，适合过渡不适合长干。</p></div>
+        <div class="cmt"><div class="who"><span class="av">蒋</span>蒋南风</div><p>最烦的是软色情配文，图合规文有问题，判断全靠语感，规则怎么写都写不全。</p></div>
+        <div class="cmt"><div class="who"><span class="av">韩</span>韩三平</div><p>分级认证试点之后，考过视频方向能接更高权限的处置，算是给了一线一条上升路。</p></div>
+        <div class="cmt"><div class="who"><span class="av">沈</span>沈知秋</div><p>面试时一定要问清轮岗和休息安排，这比问薪资更能反映团队是否靠谱。</p></div>
+      </div>
+    </section>
+
+    <!-- 9 资讯 -->
+    <section class="sec" id="news">
+      <div class="sec-head"><span class="bar"></span><h2>行业资讯：内容安全领域的新动向</h2><span class="sub">示例资讯</span></div>
+      <ul class="news">
+        <li>
+          <div class="t"><b>多模态审核模型在短视频场景的落地进展</b><time>2025-03-18</time></div>
+          <p>画面、语音、字幕三路信息联合判断，减少单帧误判，人工审核更多转向边界样本复核。</p>
+        </li>
+        <li>
+          <div class="t"><b>审核员分级认证在部分平台试点</b><time>2025-02-26</time></div>
+          <p>按图片、视频、直播分方向考核，通过后承担更高权限处置，岗位成长路径更清晰。</p>
+        </li>
+        <li>
+          <div class="t"><b>远程审核岗位的合规要求进一步明确</b><time>2025-02-09</time></div>
+          <p>独立空间、屏幕防窥、操作留痕成为基本条件，敏感素材本地留存被明确禁止。</p>
+        </li>
+        <li>
+          <div class="t"><b>未成年人相关内容的处置流程单列</b><time>2025-01-21</time></div>
+          <p>从常规队列剥离走专线上报，不参与常规绩效统计，强调优先拦截与及时上报。</p>
+        </li>
+        <li>
+          <div class="t"><b>审核岗位心理支持方案在行业内推广</b><time>2024-12-30</time></div>
+          <p>控制连续工作时长、设置强制休息、提供心理支持渠道，成为团队建设的重要环节。</p>
+        </li>
+        <li>
+          <div class="t"><b>软色情引流手法的规避与识别更新</b><time>2024-12-11</time></div>
+          <p>图文分离、贴纸遮挡、谐音暗示等手法持续演变，规则与案例库需要同步迭代。</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="sec" id="recs">
+      <div class="sec-head"><span class="bar"></span><h2>延伸方向：想深入了解可以看这些</h2><span class="sub">标签索引</span></div>
+      <div class="recs">
+        <a href="#deep">图片分级判定细则<span>暴露程度与遮挡处理的边界</span></a>
+        <a href="#deep">视频抽帧与连续性判断<span>单帧误判的常见来源</span></a>
+        <a href="#guide">远程坐班设备与合规<span>空间隔离与操作留痕</span></a>
+        <a href="#faq">夜班心理调节方法<span>情绪切换与轮岗机制</span></a>
+        <a href="#faq">审核员分级认证路径<span>图片、视频、直播分方向</span></a>
+        <a href="#cmt">内容风控岗位转岗<span>从一线到策略与培训</span></a>
+        <a href="#news">多模态审核模型进展<span>人机协同的分工变化</span></a>
+        <a href="#hot">未成年人保护专项<span>优先拦截与专线上报</span></a>
+      </div>
+    </section>
+
+    <!-- 11 时间线 -->
+    <section class="sec" id="timeline">
+      <div class="sec-head"><span class="bar"></span><h2>标准演进：这个岗位是怎么被定义的</h2><span class="sub">时间线 · 趋势观察</span></div>
+      <ul class="tl">
+        <li><b>早期：人工抽检为主</b><p>平台内容量小，审核多为兼职抽检，判断标准依赖个人经验，口径不统一。</p></li>
+        <li><b>规则化：分级标准成型</b><p>随着内容量爆发，三档分级、命中条目、处置理由模板逐步建立，判断开始可追溯。</p></li>
+        <li><b>模型化：人机协同</b><p>模型承担高召回预筛，人工聚焦边界样本，审核员从"看得多"转向"判得准"。</p></li>
+        <li><b>专业化：分级认证与专项治理</b><p>按内容形态分方向考核，未成年人相关流程单列，岗位要求向规则理解与案例积累倾斜。</p></li>
+      </ul>
+      <p class="note">趋势上看，这个岗位的门槛在提高，重复性判断被模型吸收，留下的是需要语境理解和书面表达的部分。</p>
+    </section>
+
+  </main>
+
+  <!-- 右栏 -->
+  <aside class="col-right" aria-label="辅助阅读">
+    <div class="panel">
+      <h4>本页目录</h4>
+      <ul class="toc">
+        <li><a href="#intro">岗位定义</a></li>
+        <li><a href="#hot">职责场景</a></li>
+        <li><a href="#latest">更新动态</a></li>
+        <li><a href="#cats">审核类型</a></li>
+        <li><a href="#deep">流程解析</a></li>
+        <li><a href="#guide">入行指南</a></li>
+        <li><a href="#faq">常见问答</a></li>
+        <li><a href="#cmt">从业者说</a></li>
+        <li><a href="#news">行业资讯</a></li>
+        <li><a href="#recs">延伸方向</a></li>
+        <li><a href="#timeline">标准演进</a></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>热门条目</h4>
+      <ul class="mini-list">
+        <li><b>图片分级判定细则</b><span>遮挡处理与边界样本</span></li>
+        <li><b>直播巡查双维度印证</b><span>语音与画面交叉复核</span></li>
+        <li><b>远程坐班合规三条</b><span>空间、防窥、留痕</span></li>
+        <li><b>夜班心理支持方案</b><span>轮岗与强制休息</span></li>
+        <li><b>未成年人专线上报</b><span>优先拦截不参与绩效</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h4>相关检索</h4>
+      <div class="tag-cloud">
+        <a href="#deep">视频审核标准</a>
+        <a href="#guide">内容审核员入行</a>
+        <a href="#faq">误判申诉流程</a>
+        <a href="#hot">软色情识别</a>
+        <a href="#recs">内容风控转岗</a>
+        <a href="#news">多模态审核</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#24395f"/>
+            <circle cx="27" cy="28" r="11" fill="none" stroke="#f2c14e" stroke-width="5"/>
+            <line x1="35" y1="36" x2="48" y2="49" stroke="#f2c14e" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <b>鉴黄师是干什么的</b>
+        </div>
+        <p style="margin:0;font-size:13px;color:#9fb0cb;max-width:26em">聚焦内容审核岗位的职责边界、判断流程与入行路径，帮助读者理解这份工作真实的样子。</p>
+      </div>
+      <div>
+        <h4>岗位认知</h4>
+        <a href="#intro">岗位定义</a>
+        <a href="#hot">职责场景</a>
+        <a href="#cats">审核类型</a>
+      </div>
+      <div>
+        <h4>流程与指南</h4>
+        <a href="#deep">流程解析</a>
+        <a href="#guide">入行指南</a>
+        <a href="#faq">常见问答</a>
+      </div>
+      <div>
+        <h4>动态与延伸</h4>
+        <a href="#latest">更新动态</a>
+        <a href="#news">行业资讯</a>
+        <a href="#timeline">标准演进</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2025 鉴黄师是干什么的 · 内容安全岗位认知专题</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* 分类筛选：点击分类卡片时，对职责场景卡片做本地筛选 */
+  var catList = document.getElementById('catList');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#hot .card'));
+  var activeCat = null;
+  var map = {
+    '图片':['图片审核'],
+    '视频':['视频审核'],
+    '直播':['直播巡查'],
+    '文本':['文本辅助'],
+    '申诉':['申诉复核'],
+    '专项':['专项治理']
+  };
+  if(catList){
+    catList.addEventListener('click', function(e){
+      var a = e.target.closest('.cat');
+      if(!a) return;
+      var cat = a.getAttribute('data-cat');
+      var tags = map[cat];
+      if(!tags){ return; } /* 策略、培训类无对应卡片，仅作为跳转 */
+      e.preventDefault();
+      if(activeCat === cat){
+        activeCat = null;
+        a.classList.remove('on');
+        cards.forEach(function(c){ c.classList.remove('hide'); });
+        return;
+      }
+      activeCat = cat;
+      Array.prototype.forEach.call(catList.querySelectorAll('.cat'), function(x){ x.classList.remove('on'); });
+      a.classList.add('on');
+      cards.forEach(function(c){
+        var t = c.querySelector('.type') ? c.querySelector('.type').textContent : '';
+        c.classList.toggle('hide', tags.indexOf(t) === -1);
+      });
+    });
+  }
+
+  /* 左栏导航高亮 */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.side-nav a'));
+  var secs = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if('IntersectionObserver' in window && secs.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = '#' + en.target.id;
+          navLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === id); });
+        }
+      });
+    }, {rootMargin:'-120px 0px -65% 0px', threshold:0});
+    secs.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+                                                                                   </html>
